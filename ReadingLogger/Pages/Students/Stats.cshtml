@@ -1,0 +1,31 @@
+﻿@page  "{studentId:int}"
+@model ReadingLogger.Pages.Students.StatsModel
+@{
+    ViewData["Title"] = "Stats";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Stats for @Model.Student.FirstName @Model.Student.LastName </h1>
+<table>
+    <tr>
+        <th>
+            Weekly Minutes
+        </th>
+        <th>
+            Total Minutes
+        </th>
+    </tr>
+
+    
+        <tr>
+            <td>
+                @Model.Entries.First().WeeklyMinutes
+            </td>
+            <td>
+                @Model.Entries.First().TotalMinutes
+            </td>
+        </tr>
+    
+</table>
+
+

@@ -1,0 +1,31 @@
+﻿@page
+@model ReadingLogger.Pages.Students.AboutModel
+
+@{
+    ViewData["Title"] = "Student Body Statistics";
+}
+
+<h2>Book Statistic</h2>
+
+<table>
+    <tr>
+        <th>
+            Book
+        </th>
+        <th>
+            Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Student)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book)
+            </td>
+            <td>
+                @item.StudentCount
+            </td>
+        </tr>
+    }
+</table>

@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 using ReadingLogger.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using IdentityExample.Models;
+using ReadingLogger.Models;
 
 namespace ReadingLogger
 {
@@ -38,12 +40,17 @@ namespace ReadingLogger
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddIdentity<AppUser, AppRole>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+
+          DbInitializer.UserManager = services.BuildServiceProvider().GetService<UserManager<AppUser>>();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<LoggerContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("LoggerContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
