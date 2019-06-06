@@ -15,7 +15,7 @@ namespace ReadingLogger.Models
 
         public DbSet<Student> Student { get; set; }
         public DbSet<Entry> Entry { get; set; }
-        public DbSet<Section> Section { get; set; }
+        //public DbSet<Section> Section { get; set; }
         
     }
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -51,6 +51,9 @@ namespace ReadingLogger
 
             services.AddDbContext<LoggerContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("LoggerContext")));
+
+            services.AddDbContext<ReadingLoggerContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ReadingLoggerContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

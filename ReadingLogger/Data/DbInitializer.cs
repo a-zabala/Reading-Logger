@@ -67,22 +67,22 @@ namespace ReadingLogger.Models
             //{
               //  return;   // DB has been seeded
             //}
-            var sections = new Section[]
-            {
-                new Section {SectionID = 1050, Title = "4H",      Grade = 4},
-                new Section {SectionID = 1060, Title = "4S",      Grade = 4 },
-                new Section {SectionID = 1070, Title = "4R",      Grade = 4 },
-                new Section {SectionID = 1080, Title = "7G",      Grade = 7 },
-                new Section {SectionID = 1090, Title = "7C",      Grade = 7 },
-                new Section {SectionID = 2000, Title = "7F",      Grade = 7 },
-                new Section {SectionID = 2010, Title = "5F",      Grade = 5 },
-            };
+           // var sections = new Section[]
+            //{
+             //   new Section {SectionID = 1050, Title = "4H",      Grade = 4},
+               // new Section {SectionID = 1060, Title = "4S",      Grade = 4 },
+                //new Section {SectionID = 1070, Title = "4R",      Grade = 4 },
+                //new Section {SectionID = 1080, Title = "7G",      Grade = 7 },
+                //new Section {SectionID = 1090, Title = "7C",      Grade = 7 },
+               // new Section {SectionID = 2000, Title = "7F",      Grade = 7 },
+               // new Section {SectionID = 2010, Title = "5F",      Grade = 5 },
+            //};
 
-            foreach (Section s in sections)
-            {
-                context.Section.Add(s);
-            }
-            context.SaveChanges();
+           // foreach (Section s in sections)
+            //{
+             //   context.Section.Add(s);
+            //}
+           // context.SaveChanges();
 
             //if (context.Entry.Any())
             //{
@@ -90,18 +90,18 @@ namespace ReadingLogger.Models
             //}
             var entries = new Entry[]
             {
-            new Entry {StudentID = 1, SectionID = 1070, Book = "Harry Potter", Minutes = 20 , Pages = 15, LogDate = DateTime.Parse("2013-09-01"), },
-            new Entry {StudentID = 1, SectionID = 1070, Book = "Harry Potter", Minutes = 30 , Pages = 20, LogDate = DateTime.Parse("2013-09-02"), },
-            new Entry {StudentID = 2, SectionID = 1050, Book = "Squirm", Minutes = 20 , Pages = 15, LogDate = DateTime.Parse("2013-09-01"), },
-            new Entry {StudentID = 2, SectionID = 1050, Book = "Squirm", Minutes = 15 , Pages = 10, LogDate = DateTime.Parse("2013-09-02"), },
-            new Entry {StudentID = 3, SectionID = 1060, Book = "Sisters", Minutes = 45 , Pages = 30, LogDate = DateTime.Parse("2013-09-01"), },
-            new Entry {StudentID = 4, SectionID = 1070, Book = "Bone", Minutes = 20 , Pages = 25, LogDate = DateTime.Parse("2013-09-01"), },
-            new Entry {StudentID = 4, SectionID = 1070, Book = "Bone", Minutes = 30 , Pages = 45, LogDate = DateTime.Parse("2013-09-02"), },
-            new Entry {StudentID = 5, SectionID = 1050, Book = "Percy Jackson", Minutes = 20 , Pages = 15, LogDate = DateTime.Parse("2013-09-01"), },
-            new Entry {StudentID = 6, SectionID = 1060, Book = "Spiderwick Chronicles", Minutes = 30 , Pages = 20, LogDate = DateTime.Parse("2013-09-01"), },
-            new Entry {StudentID = 7, SectionID = 1080, Book = "The Selection", Minutes = 90 , Pages = 60, LogDate = DateTime.Parse("2013-09-01"), },
-            new Entry {StudentID = 1, SectionID = 1070, Book = "Harry Potter", Minutes = 20 , Pages = 15, LogDate = DateTime.Parse("2013-09-01"), },
-            new Entry {StudentID = 2, SectionID = 1050, Book = "Squirm", Minutes = 60 , Pages = 45, LogDate = DateTime.Parse("2013-09-03"), }
+            new Entry {StudentID = 1,  Book = "Harry Potter", Minutes = 20 , Pages = 15, LogDate = DateTime.Parse("2013-09-01"), },
+            new Entry {StudentID = 1, Book = "Harry Potter", Minutes = 30 , Pages = 20, LogDate = DateTime.Parse("2013-09-02"), },
+            new Entry {StudentID = 2,  Book = "Squirm", Minutes = 20 , Pages = 15, LogDate = DateTime.Parse("2013-09-01"), },
+            new Entry {StudentID = 2,  Book = "Squirm", Minutes = 15 , Pages = 10, LogDate = DateTime.Parse("2013-09-02"), },
+            new Entry {StudentID = 3,  Book = "Sisters", Minutes = 45 , Pages = 30, LogDate = DateTime.Parse("2013-09-01"), },
+            new Entry {StudentID = 4,  Book = "Bone", Minutes = 20 , Pages = 25, LogDate = DateTime.Parse("2013-09-01"), },
+            new Entry {StudentID = 4,  Book = "Bone", Minutes = 30 , Pages = 45, LogDate = DateTime.Parse("2013-09-02"), },
+            new Entry {StudentID = 5,  Book = "Percy Jackson", Minutes = 20 , Pages = 15, LogDate = DateTime.Parse("2013-09-01"), },
+            new Entry {StudentID = 6, Book = "Spiderwick Chronicles", Minutes = 30 , Pages = 20, LogDate = DateTime.Parse("2013-09-01"), },
+            new Entry {StudentID = 7,  Book = "The Selection", Minutes = 90 , Pages = 60, LogDate = DateTime.Parse("2013-09-01"), },
+            new Entry {StudentID = 1,  Book = "Harry Potter", Minutes = 20 , Pages = 15, LogDate = DateTime.Parse("2013-09-01"), },
+            new Entry {StudentID = 2,  Book = "Squirm", Minutes = 60 , Pages = 45, LogDate = DateTime.Parse("2013-09-03"), }
             };
             foreach (Entry e in entries)
             {
